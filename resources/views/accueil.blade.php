@@ -13,15 +13,22 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div class="container ">
+    <div class="container mt-5">
         <div class="row justify-content-center">
-            <h5>BIENVENUE SUR MA VEILLE N°1 SUR LARAVEL</h5>
-            <div class="col-md-8">
-                <div class="card">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <h6 class="animate-charcter"> MON TABLEUR DE RECETTE</h6>
+              </div>
+            </div>
+          </div> 
+            <div class="col-md-10">
+                <div class="card ">
                     <div class="card-header font-weight-bold  text-center">{{ __('Enregistrement recette') }}</div>
-                    <div class="card-body d-flex">
+                    <div class="card-body d-flex justify-content-center">
                         <form action="{{route('enreg')}}" method="post" id="recette_form" enctype="multipart/form-data">
                             @csrf
                             <div class="form-row">

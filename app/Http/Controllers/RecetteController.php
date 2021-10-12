@@ -12,7 +12,7 @@ class RecetteController extends Controller
         $recettes= Recette::latest()->paginate(3);
         $somme=Recette::all();
         $totalRecette = $somme->sum('recette');
-        return view('accueil', compact('recettes', 'produit', 'totalRecette'));
+        return view('accueil', compact('recettes','totalRecette'));
     }
 
     public function test()
